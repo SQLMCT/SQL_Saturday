@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="IQP_Demos">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="(local)\JDSQL19:NORTHAMERICA\jodeardu">
+          <Created>2022-08-11T09:10:09.3558-04:00</Created>
+          <Type>SQL</Type>
+          <Server>(local)\JDSQL19</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>WideWorldImportersDW</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>SQL Server Management Studio</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="jdsql2022.northcentralus.cloudapp.azure.com:jdsqladmin">
+          <Created>2022-08-02T10:09:56.0680982-04:00</Created>
+          <Type>SQL</Type>
+          <Server>jdsql2022.northcentralus.cloudapp.azure.com</Server>
+          <UserName>jdsqladmin</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="MININT-8NFA4TH\JDSQL19:NORTHAMERICA\jodeardu">
+          <Created>2022-07-31T11:27:25.9156673-04:00</Created>
+          <Type>SQL</Type>
+          <Server>MININT-8NFA4TH\JDSQL19</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>master</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="IQP Demo - PSP with XE.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MININT-8NFA4TH\JDSQL19:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MININT-8NFA4TH\JDSQL19</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>IQP Demo - PSP with XE.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IQP_MGF_2022.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MININT-8NFA4TH\JDSQL19:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MININT-8NFA4TH\JDSQL19</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>IQP_MGF_2022.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IQP_OPF_2022.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jdsql2022.northcentralus.cloudapp.azure.com:False:jdsqladmin</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jdsql2022.northcentralus.cloudapp.azure.com</AssociatedConnSrvName>
+          <AssociatedConnUserName>jdsqladmin</AssociatedConnUserName>
+          <FullPath>IQP_OPF_2022.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

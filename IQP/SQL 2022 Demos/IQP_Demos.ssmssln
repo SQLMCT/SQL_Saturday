@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 19.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "IQP_Demos", "IQP_Demos.ssmssqlproj", "{B79F1105-1D5C-4ABB-808F-66D60B49D39C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6008F62E-1E2E-4B07-B778-5CEF104C67EA}.Default|Default.ActiveCfg = Default
+		{B79F1105-1D5C-4ABB-808F-66D60B49D39C}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63A98654-3ADA-4AA8-8A2A-282FB7483F38}
+	EndGlobalSection
+EndGlobal
