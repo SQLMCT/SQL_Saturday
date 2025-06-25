@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Writing_SQL">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="SQLMCT\JDSQL2019:NORTHAMERICA\jodeardu">
+          <Created>2025-02-14T08:52:19.0055064-05:00</Created>
+          <Type>SQL</Type>
+          <Server>SQLMCT\JDSQL2019</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <TrustServerCertificate>False</TrustServerCertificate>
+          <EncryptionOption>True</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="02_Sargable_Column_Order.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQLMCT\JDSQL2019:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQLMCT\JDSQL2019</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02_Sargable_Column_Order.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02_Sargable_Conversions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQLMCT\JDSQL2019:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQLMCT\JDSQL2019</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02_Sargable_Conversions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02_Sargable_Expressions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQLMCT\JDSQL2019:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQLMCT\JDSQL2019</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02_Sargable_Expressions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03_Create_Join_Demo_Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQLMCT\JDSQL2019:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQLMCT\JDSQL2019</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>03_Create_Join_Demo_Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03_Joining_Multiple_Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQLMCT\JDSQL2019:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQLMCT\JDSQL2019</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>03_Joining_Multiple_Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04_BlockingDemo1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQLMCT\JDSQL2019:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQLMCT\JDSQL2019</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>04_BlockingDemo1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04_BlockingDemo2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQLMCT\JDSQL2019:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQLMCT\JDSQL2019</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>04_BlockingDemo2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05_CTE_TempTable.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQLMCT\JDSQL2019:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQLMCT\JDSQL2019</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05_CTE_TempTable.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
