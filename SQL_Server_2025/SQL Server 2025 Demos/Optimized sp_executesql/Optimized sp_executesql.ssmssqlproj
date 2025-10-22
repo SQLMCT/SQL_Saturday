@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Optimized sp_executesql">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="sqlbobt4,14330:REDMOND\bobtay">
+          <Created>2025-09-09T11:27:46.7189125-04:00</Created>
+          <Type>SQL</Type>
+          <Server>sqlbobt4,14330</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>AdventureWorks2022</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <TrustServerCertificate>True</TrustServerCertificate>
+          <EncryptionOption>True</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="sqlbobt4:REDMOND\bobtay">
+          <Created>2025-06-04T14:44:34.4769615-04:00</Created>
+          <Type>SQL</Type>
+          <Server>sqlbobt4</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>AdventureWorks</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <TrustServerCertificate>True</TrustServerCertificate>
+          <EncryptionOption>True</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="00. Optimized sp_executesql script.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>00. Optimized sp_executesql script.sql</FullPath>
+        </FileNode>
+        <FileNode Name="01. disable_optimized_sp_executesql.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>01. disable_optimized_sp_executesql.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02. clearplancache.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02. clearplancache.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03. getcachedplans.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>03. getcachedplans.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04. trace_locks.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>04. trace_locks.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05. enable_optimized_sp_executesql.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05. enable_optimized_sp_executesql.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Drive Workload.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Drive Workload.sql</FullPath>
+        </FileNode>
+        <FileNode Name="workload1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4,14330:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4,14330</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>workload1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="workload2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>workload2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="workload3.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>workload3.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items>
+        <FileNode Name="workload.cmd">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>workload.cmd</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

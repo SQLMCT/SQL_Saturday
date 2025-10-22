@@ -1,0 +1,182 @@
+﻿
+/*
+This Sample Code is provided for the purpose of illustration only and is not intended to be used in a production environment.  
+THIS SAMPLE CODE AND ANY RELATED INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.  
+We grant You a nonexclusive, royalty-free right to use and modify the 
+Sample Code and to reproduce and distribute the object code form of the Sample Code, provided that You agree: (i) to not use Our name, logo, or trademarks to market Your software product in which the Sample Code is embedded; 
+(ii) to include a valid copyright notice on Your software product in which the Sample Code is 
+embedded; and 
+(iii) to indemnify, hold harmless, and defend Us and Our suppliers from and against any claims or lawsuits, including attorneys’ fees, that arise or result from the use or distribution of the Sample Code.
+Please note: None of the conditions outlined in the disclaimer above will supercede the terms and conditions contained within the Premier Customer Services Description.
+*/	
+-- step 0
+-- Create Azure AI Foundry Project
+-- Add the appropriate model to your project
+-- Save the URLs to use in credential and External model definitions
+-- see the Creating a Foundry Project and adding a model.pdf file for more info
+
+-- OK now we can get started!
+
+--Step 1 Enable REST endpoints
+USE master;
+GO
+sp_configure 'external rest endpoint enabled', 1;
+GO
+RECONFIGURE WITH OVERRIDE;
+GO
+
+--Step 2 Will not be necessary in release version
+-- Enable vector index and search for CTP builds
+DBCC TRACEON (466, 13981, -1) 
+GO
+
+--Step 3 restore AdventureWorks2022
+
+--Step 4 Enable DSC
+USE [AdventureWorks2022];
+GO
+IF NOT EXISTS(SELECT * FROM sys.symmetric_keys WHERE [name] = '##MS_DatabaseMasterKey##')
+BEGIN
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = N'Se@h@wk$12SuperBowl';
+END;
+GO
+IF EXISTS(SELECT * FROM sys.[database_scoped_credentials] WHERE NAME = 'https://sql2025demosai.services.ai.azure.com/')
+BEGIN
+	DROP DATABASE SCOPED CREDENTIAL [https://sql2025demosai.services.ai.azure.com/]
+END;
+CREATE DATABASE SCOPED CREDENTIAL [https://sql2025demosai.services.ai.azure.com/]
+WITH IDENTITY = 'HTTPEndpointHeaders', 
+SECRET = '{"api-key":"BURLSKTGHfG9iIQrTUU9QMsfT5ci1L77tKrdkmuPPhtJurfQ9pltJQQJ99BHACYeBjFXJ3w3AAAAACOGiDD6"}';
+GO
+
+-- Let's see what's there
+-- SELECT * from sys.database_scoped_credentials
+
+--Step 5
+IF EXISTS(Select * FROM sys.external_models where NAME='MyAzureOpenAIEmbeddingModel')
+BEGIN
+	DROP EXTERNAL MODEL MyAzureOpenAIEmbeddingModel;
+END
+GO
+-- LOCATION is api-key+path to model
+CREATE EXTERNAL MODEL MyAzureOpenAIEmbeddingModel
+WITH (		  
+  LOCATION = 'https://sql2025demosai.services.ai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2023-05-15',
+  API_FORMAT = 'Azure OpenAI',
+  MODEL_TYPE = EMBEDDINGS,
+  MODEL = 'text-embedding-ada-002',
+  CREDENTIAL = [https://sql2025demosai.services.ai.azure.com/]
+);
+
+--select * from sys.external_models
+
+--Step 6 Create embedding table
+DROP TABLE IF EXISTS Production.ProductDescriptionEmbeddings;
+GO
+CREATE TABLE Production.ProductDescriptionEmbeddings
+( 
+  ProductDescEmbeddingID INT IDENTITY NOT NULL PRIMARY KEY CLUSTERED, -- Need a single column as cl index to support vector index reqs
+  ProductID INT NOT NULL,
+  ProductDescriptionID INT NOT NULL,
+  ProductModelID INT NOT NULL,
+  CultureID nchar(6) NOT NULL,
+  Embedding vector(1536)
+);
+
+-- Populate rows with embeddings
+-- Need to make sure and only get Products that have ProductModels
+INSERT INTO Production.ProductDescriptionEmbeddings
+SELECT p.ProductID, pmpdc.ProductDescriptionID, pmpdc.ProductModelID, pmpdc.CultureID, 
+AI_GENERATE_EMBEDDINGS(pd.Description USE MODEL MyAzureOpenAIEmbeddingModel)
+FROM Production.ProductModelProductDescriptionCulture pmpdc
+JOIN Production.Product p
+ON pmpdc.ProductModelID = p.ProductModelID
+JOIN Production.ProductDescription pd
+ON pd.ProductDescriptionID = pmpdc.ProductDescriptionID
+ORDER BY p.ProductID;
+GO
+-- SELECT TOP 10  * from [Production].[ProductDescriptionEmbeddings]
+
+-- Create an alternate key using an ncl index
+CREATE UNIQUE NONCLUSTERED INDEX [IX_ProductDescriptionEmbeddings_AlternateKey]
+ON [Production].[ProductDescriptionEmbeddings]
+(
+    [ProductID] ASC,
+    [ProductModelID] ASC,
+    [ProductDescriptionID] ASC,
+    [CultureID] ASC
+);
+GO
+-- SELECT top 10 * from [Production].[ProductDescriptionEmbeddings]
+
+--CREATE VECTOR INDEX index_name
+--ON object ( vector_column )  
+--[ WITH (
+--    [,] METRIC = { 'cosine' | 'dot' | 'euclidean' }
+--    [ [,] TYPE = 'DiskANN' ] -- Currently the only type of index ANN is Approximate Nearest Neighbor
+-- https://suhasjs.github.io/files/diskann_neurips19.pdf
+--    [ [,] MAXDOP = max_degree_of_parallelism ]
+--) ]
+--[ ON { filegroup_name | "default" } ]
+--[;]
+
+--Step 7 Create vector index
+CREATE VECTOR INDEX product_vector_index 
+ON Production.ProductDescriptionEmbeddings (Embedding)
+WITH (METRIC = 'cosine', TYPE = 'diskann', MAXDOP = 8);
+GO
+
+--Step 8 Let's setup to query the data!
+CREATE OR ALTER PROCEDURE [find_relevant_products_vector_search]
+	@prompt NVARCHAR(max), -- NL prompt
+	@stock SMALLINT = 500, -- Only show product with stock level of >= 500. User can override
+	@top INT = 10, -- Only show top 10. User can override
+	@min_similarity DECIMAL(19,16) = 0.3 -- Similarity level that user can change but recommend to leave default
+AS
+-- short circuit if no prompt
+IF (@prompt is null) RETURN;
+
+DECLARE @retval INT, @vector VECTOR(1536);
+-- AI_GENERATE_EMBEDDINGS is a built-in function that creates embeddings (vector arrays) 
+-- using a precreated AI model definition stored in the database.
+SELECT @vector = AI_GENERATE_EMBEDDINGS(@prompt USE MODEL MyAzureOpenAIEmbeddingModel)
+-- if there was an error, return
+IF (@retval != 0) RETURN;
+
+-- Use VECTOR_SEARCH to search for vectors similar to a given 
+-- query vectors using an approximate nearest neighbors vector search algorithm. 
+SELECT p.Name as ProductName, pd.Description AS ProductDescription, p.SafetyStockLevel AS StockLevel
+FROM VECTOR_SEARCH(
+	TABLE = Production.ProductDescriptionEmbeddings AS t,
+	COLUMN = Embedding,
+	similar_to = @vector,
+	metric = 'cosine',
+	top_n = @top
+	) AS s
+JOIN Production.ProductDescriptionEmbeddings pe
+ON t.ProductDescEmbeddingID = pe.ProductDescEmbeddingID
+JOIN Production.Product p
+ON pe.ProductID = p.ProductID
+JOIN Production.ProductDescription pd
+ON pd.ProductDescriptionID = pe.ProductDescriptionID
+-- key phrase!
+WHERE (1-s.distance) > @min_similarity
+AND p.SafetyStockLevel >= @stock
+ORDER by s.distance;
+GO
+
+--Step 9 Query
+EXEC find_relevant_products_vector_search
+@prompt = N'Show me stuff for extreme outdoor sports',
+@stock = 100, 
+@top = 20;
+GO
+
+
+-- Do the same prompt but in Chinese
+EXEC find_relevant_products_vector_search
+@prompt = N'请向我展示极限户外运动的装备',
+@stock = 100,
+@top = 20;
+GO
+

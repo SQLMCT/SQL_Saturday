@@ -1,0 +1,43 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bobtay\\Documents\\SQL Server Management Studio\\REGEX demo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0D85B7A2-FF9C-E18A-E8E9-A174AD1F9706}|REGEX demo.ssmssqlproj|C:\\Users\\bobtay\\Documents\\SQL Server Management Studio\\REGEX demo\\regex.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{0D85B7A2-FF9C-E18A-E8E9-A174AD1F9706}|REGEX demo.ssmssqlproj|solutionrelative:regex.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3eb44d79-dda1-4580-b810-0808975173e4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:41656292:0:{ed7d6f85-175b-4b57-9887-71fe8b865fc8}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "regex.sql - sqlbobt4,14330.hr (REDMOND\\bobtay (58))",
+              "DocumentMoniker": "C:\\Users\\bobtay\\Documents\\SQL Server Management Studio\\REGEX demo\\regex.sql",
+              "RelativeDocumentMoniker": "regex.sql",
+              "ToolTip": "regex.sql - sqlbobt4,14330.hr (REDMOND\\bobtay (58))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-08T15:34:52.554Z",
+              "EditorCaption": " - sqlbobt4,14330.hr (REDMOND\\bobtay (58))"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

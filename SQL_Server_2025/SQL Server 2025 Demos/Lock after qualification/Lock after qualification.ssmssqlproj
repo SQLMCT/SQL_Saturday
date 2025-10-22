@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Lock after qualification">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="sqlbobt4:REDMOND\bobtay">
+          <Created>2025-06-04T11:09:36.9813301-04:00</Created>
+          <Type>SQL</Type>
+          <Server>sqlbobt4</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>master</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <TrustServerCertificate>True</TrustServerCertificate>
+          <EncryptionOption>True</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="00. Lock After Qualification Script.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>00. Lock After Qualification Script.sql</FullPath>
+        </FileNode>
+        <FileNode Name="09. disablercsi.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>09. disablercsi.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10. updatefreightpo1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>10. updatefreightpo1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="11. updatefreightpo2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>11. updatefreightpo2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="12. enablercsi.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sqlbobt4:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sqlbobt4</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>12. enablercsi.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

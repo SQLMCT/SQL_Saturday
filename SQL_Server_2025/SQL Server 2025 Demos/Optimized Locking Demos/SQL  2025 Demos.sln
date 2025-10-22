@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Version 21
+VisualStudioVersion = 17.14.36127.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Optimized Locking Demos", "Optimized Locking Demos.ssmssqlproj", "{2310F0FE-3A8F-8435-743D-C0620018DE53}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Lock after qualification", "..\Lock after qualification\Lock after qualification.ssmssqlproj", "{7DF116DE-BCF0-FACA-33DA-D63EA74E4AC8}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "JSON Data Type", "..\JSON Data Type\JSON Data Type.ssmssqlproj", "{827F3C92-F215-4EA4-B3A8-28367D0EAB91}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "REGEX demo", "..\REGEX demo\REGEX demo.ssmssqlproj", "{49E7D789-8A55-78AA-67B8-8C30198A2ADA}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Optimized sp_executesql", "..\Optimized sp_executesql\Optimized sp_executesql.ssmssqlproj", "{C06330DB-3B56-7E89-407D-6143E09F344B}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Vector Search demos", "..\Vector Search demos\Vector Search demos.ssmssqlproj", "{103687D9-3812-09F1-BA3A-CB0CFF26493B}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Engine Enhancements", "..\Engine Enhancements\Engine Enhancements.ssmssqlproj", "{AB84A89C-AC6B-E04C-A95E-8719876D58B1}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ABORT_QUERY_EXECUTION Demo", "..\ABORT_QUERY_EXECUTION Demo\ABORT_QUERY_EXECUTION Demo.ssmssqlproj", "{413111A8-E62C-08D9-BDE5-39A1BD230B84}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Product()", "..\Product()\Product().ssmssqlproj", "{CF973B6B-9DD5-F26C-54FB-9EB47092C636}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Base64 Encoding and Decoding", "..\Base64 Encoding and Decoding\Base64 Encoding and Decoding.ssmssqlproj", "{F306166D-ACAC-79B2-3D04-B4E42549456D}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Fuzzy Match Demo", "..\Fuzzy Match Demo\Fuzzy Match Demo.ssmssqlproj", "{F845D814-054B-7C76-4846-6D09499AE170}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Misc T-SQL Functions", "..\Misc T-SQL Functions\Misc T-SQL Functions.ssmssqlproj", "{0021052E-8CEF-53D9-4478-431E10F1BDA3}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "AI dEmos", "..\AI dEmos\AI dEmos.ssmssqlproj", "{44DCBC0B-7DCB-F3C0-DA26-9A820B14B4BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2310F0FE-3A8F-8435-743D-C0620018DE53}.Default|Default.ActiveCfg = Default
+		{7DF116DE-BCF0-FACA-33DA-D63EA74E4AC8}.Default|Default.ActiveCfg = Default
+		{827F3C92-F215-4EA4-B3A8-28367D0EAB91}.Default|Default.ActiveCfg = Default
+		{49E7D789-8A55-78AA-67B8-8C30198A2ADA}.Default|Default.ActiveCfg = Default
+		{C06330DB-3B56-7E89-407D-6143E09F344B}.Default|Default.ActiveCfg = Default
+		{103687D9-3812-09F1-BA3A-CB0CFF26493B}.Default|Default.ActiveCfg = Default
+		{09D19196-E675-42F2-8DAD-9C803C783A5C}.Default|Default.ActiveCfg = Default
+		{AB84A89C-AC6B-E04C-A95E-8719876D58B1}.Default|Default.ActiveCfg = Default
+		{413111A8-E62C-08D9-BDE5-39A1BD230B84}.Default|Default.ActiveCfg = Default
+		{CF973B6B-9DD5-F26C-54FB-9EB47092C636}.Default|Default.ActiveCfg = Default
+		{F306166D-ACAC-79B2-3D04-B4E42549456D}.Default|Default.ActiveCfg = Default
+		{F845D814-054B-7C76-4846-6D09499AE170}.Default|Default.ActiveCfg = Default
+		{0021052E-8CEF-53D9-4478-431E10F1BDA3}.Default|Default.ActiveCfg = Default
+		{44DCBC0B-7DCB-F3C0-DA26-9A820B14B4BC}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD2419B8-D8DC-43AB-AB30-6BA056AC96FE}
+	EndGlobalSection
+EndGlobal

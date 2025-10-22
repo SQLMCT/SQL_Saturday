@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Version 21
+VisualStudioVersion = 17.14.36429.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ABORT_QUERY_EXECUTION Demo", "..\..\..\..\..\Documents\SQL Server Management Studio\ABORT_QUERY_EXECUTION Demo\ABORT_QUERY_EXECUTION Demo.ssmssqlproj", "{B7D6239B-C5E9-4386-1AAA-40E818487FC9}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "AI dEmos", "..\..\..\..\..\Documents\SQL Server Management Studio\AI Demos\AI dEmos.ssmssqlproj", "{A94A24D0-43E5-6E99-859A-5B86D8FEFC47}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Engine Enhancements", "..\..\..\..\..\Documents\SQL Server Management Studio\Engine Enhancements\Engine Enhancements.ssmssqlproj", "{02DF135B-1DC7-29A0-90DC-49DA0A304F43}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Fuzzy Match Demo", "..\..\..\..\..\Documents\SQL Server Management Studio\Fuzzy Match Demo\Fuzzy Match Demo.ssmssqlproj", "{3B4ABC3B-4B8E-9BFA-CD27-2806686B4D7A}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "JSON Data Type", "..\..\..\..\..\Documents\SQL Server Management Studio\JSON Data Type\JSON Data Type.ssmssqlproj", "{09AB1F7A-7553-2DD5-7D13-45CD92DDECF2}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Lock after qualification", "..\..\..\..\..\Documents\SQL Server Management Studio\Lock after qualification\Lock after qualification.ssmssqlproj", "{23AE74A3-E04E-AC01-BF9C-C816175613AD}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Misc T-SQL Functions", "..\..\..\..\..\Documents\SQL Server Management Studio\Misc T-SQL Functions\Misc T-SQL Functions.ssmssqlproj", "{13F622BE-A57C-62EE-AC8D-997EDBB07AD8}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Optimized Locking Demos", "..\..\..\..\..\Documents\SQL Server Management Studio\Optimized Locking Demos\Optimized Locking Demos.ssmssqlproj", "{542BD2A6-D939-D22F-A698-EAB5C37B539B}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Optimized sp_executesql", "..\..\..\..\..\Documents\SQL Server Management Studio\Optimized sp_executesql\Optimized sp_executesql.ssmssqlproj", "{CB22DA1D-B610-769C-A2DF-A92ADAB95784}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Product()", "..\..\..\..\..\Documents\SQL Server Management Studio\Product()\Product().ssmssqlproj", "{B4977B71-4D6B-B940-C3DB-845B419AEE45}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "REGEX demo", "..\..\..\..\..\Documents\SQL Server Management Studio\REGEX demo\REGEX demo.ssmssqlproj", "{B81A6B9B-C744-C756-09FA-0A10B0D839C3}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Vector Search demos", "..\..\..\..\..\Documents\SQL Server Management Studio\Vector Search demos\Vector Search demos.ssmssqlproj", "{B7F46F2F-8763-195B-08A2-A23D65816B23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7D6239B-C5E9-4386-1AAA-40E818487FC9}.Default|Default.ActiveCfg = Default
+		{A94A24D0-43E5-6E99-859A-5B86D8FEFC47}.Default|Default.ActiveCfg = Default
+		{02DF135B-1DC7-29A0-90DC-49DA0A304F43}.Default|Default.ActiveCfg = Default
+		{3B4ABC3B-4B8E-9BFA-CD27-2806686B4D7A}.Default|Default.ActiveCfg = Default
+		{09AB1F7A-7553-2DD5-7D13-45CD92DDECF2}.Default|Default.ActiveCfg = Default
+		{23AE74A3-E04E-AC01-BF9C-C816175613AD}.Default|Default.ActiveCfg = Default
+		{13F622BE-A57C-62EE-AC8D-997EDBB07AD8}.Default|Default.ActiveCfg = Default
+		{542BD2A6-D939-D22F-A698-EAB5C37B539B}.Default|Default.ActiveCfg = Default
+		{CB22DA1D-B610-769C-A2DF-A92ADAB95784}.Default|Default.ActiveCfg = Default
+		{B4977B71-4D6B-B940-C3DB-845B419AEE45}.Default|Default.ActiveCfg = Default
+		{B81A6B9B-C744-C756-09FA-0A10B0D839C3}.Default|Default.ActiveCfg = Default
+		{B7F46F2F-8763-195B-08A2-A23D65816B23}.Default|Default.ActiveCfg = Default
+		{D10A64BB-62F6-4C76-9DBC-02AC24039B9C}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F11A6E5B-3C18-4806-B680-10A069FFE436}
+	EndGlobalSection
+EndGlobal

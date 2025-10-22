@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bobtay\\Documents\\SQL Server Management Studio\\Optimized Locking Demos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{49E7D789-8A55-78AA-67B8-8C30198A2ADA}|..\\REGEX demo\\REGEX demo.ssmssqlproj|C:\\Users\\bobtay\\Documents\\SQL Server Management Studio\\REGEX demo\\regex.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F845D814-054B-7C76-4846-6D09499AE170}|..\\Fuzzy Match Demo\\Fuzzy Match Demo.ssmssqlproj|C:\\Users\\bobtay\\Documents\\SQL Server Management Studio\\Fuzzy Match Demo\\Fuzzy Match.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0021052E-8CEF-53D9-4478-431E10F1BDA3}|..\\Misc T-SQL Functions\\Misc T-SQL Functions.ssmssqlproj|C:\\Users\\bobtay\\Documents\\SQL Server Management Studio\\Misc T-SQL Functions\\Misc Functions.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3eb44d79-dda1-4580-b810-0808975173e4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:41656292:0:{ed7d6f85-175b-4b57-9887-71fe8b865fc8}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ed7d6f85-175b-4b57-9887-71fe8b865fc8}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Misc Functions.sql - wideworldimportersdw (REDMOND\\bobtay (54))",
+              "DocumentMoniker": "C:\\Users\\bobtay\\Documents\\SQL Server Management Studio\\Misc T-SQL Functions\\Misc Functions.sql",
+              "RelativeDocumentMoniker": "..\\Misc T-SQL Functions\\Misc Functions.sql",
+              "ToolTip": "Misc Functions.sql - wideworldimportersdw (REDMOND\\bobtay (54))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-17T15:27:33.14Z",
+              "EditorCaption": " - wideworldimportersdw (REDMOND\\bobtay (54))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Fuzzy Match.sql - wideworldimportersdw (REDMOND\\bobtay (73))",
+              "DocumentMoniker": "C:\\Users\\bobtay\\Documents\\SQL Server Management Studio\\Fuzzy Match Demo\\Fuzzy Match.sql",
+              "RelativeDocumentMoniker": "..\\Fuzzy Match Demo\\Fuzzy Match.sql",
+              "ToolTip": "Fuzzy Match.sql - wideworldimportersdw (REDMOND\\bobtay (73))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-17T15:15:27.696Z",
+              "EditorCaption": " - wideworldimportersdw (REDMOND\\bobtay (73))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "regex.sql - wideworldimportersdw (REDMOND\\bobtay (57))",
+              "DocumentMoniker": "C:\\Users\\bobtay\\Documents\\SQL Server Management Studio\\REGEX demo\\regex.sql",
+              "RelativeDocumentMoniker": "..\\REGEX demo\\regex.sql",
+              "ToolTip": "regex.sql - wideworldimportersdw (REDMOND\\bobtay (57))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-16T20:15:40.325Z",
+              "EditorCaption": " - wideworldimportersdw (REDMOND\\bobtay (57))"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
